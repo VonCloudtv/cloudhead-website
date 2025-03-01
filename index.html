@@ -10,19 +10,22 @@
             font-family: 'Orbitron', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #0D0D0D;
+            background: linear-gradient(135deg, #1C1C1C, #2E2E2E);
             color: #fff;
             text-align: center;
             overflow-x: hidden;
         }
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 50px auto;
             padding: 20px;
             position: relative;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
         }
         h1 {
-            font-size: 3em;
+            font-size: 3.5em;
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 3px;
@@ -34,18 +37,43 @@
             font-size: 1.3em;
             opacity: 0.85;
         }
+        .links a {
+            display: inline-block;
+            margin: 15px 10px;
+            padding: 12px 25px;
+            color: #fff;
+            background: linear-gradient(90deg, #00A3E0, #FFD700);
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: transform 0.3s ease, background 0.3s;
+        }
+        .links a:hover {
+            transform: scale(1.1);
+            background: linear-gradient(90deg, #FFD700, #00A3E0);
+        }
         .embed {
             margin: 30px 0;
             box-shadow: 0 4px 20px rgba(0, 255, 255, 0.3);
             border-radius: 10px;
             overflow: hidden;
         }
+        .glow {
+            text-shadow: 0 0 10px #00FFFF, 0 0 20px #00A3E0;
+        }
+        .holographic {
+            animation: holo 5s infinite alternate;
+        }
+        @keyframes holo {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Cloudhead</h1>
-        <p>Singer | Songwriter | Producer | Engineer</p>
+        <h1 class="glow">Cloudhead</h1>
+        <p class="holographic">Singer | Songwriter | Producer | Engineer</p>
         
         <h2>Services</h2>
         <p>Mixing & Mastering | Recording | Vocal Tuning</p>
@@ -56,8 +84,8 @@
         </div>
         
         <h2>Contact</h2>
-        <p>Email: <a href="mailto:davoncochran2@gmail.com">davoncochran2@gmail.com</a></p>
-        <p>Instagram: <a href="https://instagram.com/voncloud.tv" target="_blank">@voncloud.tv</a></p>
+        <p>Email: <a href="mailto:davoncochran2@gmail.com" style="color:#FFD700; text-decoration: none;">davoncochran2@gmail.com</a></p>
+        <p>Instagram: <a href="https://instagram.com/voncloud.tv" target="_blank" style="color:#FFD700; text-decoration: none;">@voncloud.tv</a></p>
         
         <div class="footer">
             <p>&copy; 2025 Cloudhead. All Rights Reserved.</p>
